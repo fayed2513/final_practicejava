@@ -37,11 +37,9 @@ public class StudentList {
                 BufferedWriter bufferedWriter = new BufferedWriter(
                                    new FileWriter(Constants.totalList, true));
                 String substring = args[0].substring(1);
-                Date date = new Date();
-                String date_formate = Constants.dateFormat;
-                DateFormat dateFormat = new SimpleDateFormat(date_formate);
-                String fd = dateFormat.format(date);
-                bufferedWriter.write(Constants.splitAt + substring + Constants.updateList + fd);
+                DateFormat dateFormat = new SimpleDateFormat(Constants.dateFormat);
+                String formattedDate = dateFormat.format(new Date());
+                bufferedWriter.write(Constants.splitAt + substring + Constants.updateList + formattedDate);
                 bufferedWriter.close();
             } catch (Exception e) {
             }
