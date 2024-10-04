@@ -62,20 +62,8 @@ public class StudentList {
         } else if (args[0].equals(Constants.student_count)) {
             System.out.println(Constants.loading);
             try {
-                char charArray[] = readLine.toCharArray();
-                boolean in_word = false;
-                int count = 0;
-                for (char elements : charArray) {
-                    if (elements == ' ') {
-                        if (!in_word) {
-                            count++;
-                            in_word = true;
-                        } else {
-                            in_word = false;
-                        }
-                    }
-                }
-                System.out.println(count + Constants.bReader);
+                String strings[] = readLine.split(Constants.splitAt);
+                System.out.println(strings.length + Constants.bReader);
             } catch (Exception e) {
             }
             System.out.println(Constants.loaded);
