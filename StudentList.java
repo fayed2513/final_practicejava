@@ -62,7 +62,7 @@ public class StudentList {
                 boolean done = false;
                 String t = args[0].substring(1);
                 for (int idx = 0; idx < i.length && !done; idx++) {
-                    if (i[idx].equals(t)) {
+                    if (i[idx].trim().equals(t)) {
                         System.out.println("We found it!");
                         done = true;
                     }
