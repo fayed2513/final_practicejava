@@ -49,12 +49,11 @@ public class StudentList {
             System.out.println(Constants.loading);
             try {
                 String strings[] = readLine.split(Constants.splitAt);
-                boolean done = false;
                 String substring = args[0].substring(1);
-                for (int idx = 0; idx < strings.length && !done; idx++) {
+                for (int idx = 0; idx < strings.length ; idx++) {
                     if (strings[idx].trim().equals(substring)) {
                         System.out.println(Constants.student_Found);
-                        done = true;
+                      return;
                     }
                 }
             } catch (Exception e) {
